@@ -1,0 +1,105 @@
+{
+	"items": [{
+			"name": "video-mp4",
+			"data": {
+				"_object_test.mp4": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/test.mp4\",\"metadata\":{\"object\":\"test.mp4\",\"source\":\"http\",\"type\":\"object\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/test.mp4\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-01T06:13:43Z",
+			"updateTime": "2021-12-01T07:58:25Z",
+			"description": "test.mp4",
+			"version": "1638345505rst6xu"
+		},
+		{
+			"name": "dcell-service",
+			"data": {
+				"application.properties": "#\n# Copyright (C) 2020 Baidu, Inc. All Rights Reserved.\n#\nserver.port=8022\n\n#=================== database config ===================#\ndatabase.use_utc_timezore=true\ndatabase.enable=false\ndatabase.mybatis.enable=true\ndatabase.embedded=false\ndatabase.url=jdbc:mysql://mysql:3306/dcell_node_service?useUnicode=true\u0026characterEncoding=UTF-8\u0026allowMultiQueries=true\u0026zeroDateTimeBehavior=convertToNull\u0026connectTimeout=5000\u0026socketTimeout=30000\ndatabase.username=root\ndatabase.password=baidu@2021$\n\n##=================== MQTT config ===================#\nmqtt.url=ssl://baetyl-broker.baetyl-edge-system:50010\nmqtt.clientId=dcell-node-service\nmqtt.automaticReconnect=false\nmqtt.cleanSession=true\nmqtt.userName=dcell-node-service\nmqtt.password=test\nmqtt.keepAliveInterval=60\nmqtt.qos=1\nmqtt.reconnect.baseInterval=1\nmqtt.reconnect.maxInterval=1200\nmqtt.baetyl.topic=$baetyl/node/props\nmqtt.ca.pem=/var/lib/baetyl/system/certs/ca.pem\nmqtt.cert.pem=/var/lib/baetyl/system/certs/crt.pem\nmqtt.key.pem=/var/lib/baetyl/system/certs/key.pem\nmqtt.event.publish=false\nmqtt.event.topic=dcell-node-service\n\n##=================== Minio config ===================#\nstore.on=false\nstore.endpoint=http://180.76.243.153:9000\nstore.ak=akakakak\nstore.sk=sksksksk\nstore.bucket=dcell-node-service\n\n##=================== file config ===================#\nspring.http.multipart.maxFileSize=1024MB\nspring.http.multipart.maxRequestSize=1024MB\n\n#=================== logging config ===================#\nlogging.has_console_appender=false\nlogging.has_web_debug_appender=false\nlogging.info_log_file_path=${log.dir}/${service.name}/info/info.log\nlogging.error_log_file_path=${log.dir}/${service.name}/error/error.log\nlogging.warn_log_file_path=${log.dir}/${service.name}/warn/warn.log\nlogging.debug_log_file_path=${log.dir}/${service.name}/debug/debug.log\nlogging.access_log_file_path=${log.dir}/${service.name}/access/access.log\nlogging.access_debug_log_file_path=${log.dir}/${service.name}/access_debug/access_debug.log\nlogging.info_log_max_history_in_hours=168\nlogging.error_log_max_history_in_days=7\nlogging.warn_log_max_history_in_days=7\nlogging.debug_log_max_history_in_days=2\nlogging.access_log_max_history_in_hours=168\nlogging.access_debug_log_max_history_in_days=2",
+				"endpoint.json": "{\n  \"regions\": [\n    {\n      \"region\": \"default\",\n      \"services\": [\n        {\n          \"service\": \"BAETYL\",\n          \"endpoint\": \"https://baetyl-core.baetyl-edge-system:443\"\n        }\n      ]\n    }\n  ]\n}"
+			},
+			"createTime": "2021-12-03T03:14:28Z",
+			"updateTime": "2021-12-03T06:16:19Z",
+			"description": "设备端后端配置文件",
+			"version": "1638512179qg8hsl"
+		},
+		{
+			"name": "alarm-report-0",
+			"data": {
+				"_object_alarm-report.zip": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/alarm-report.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"alarm-report.zip\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/alarm-report.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T07:15:59Z",
+			"updateTime": "2021-12-03T07:20:34Z",
+			"description": "本模块分析告警数据并上报",
+			"version": "1638516034n5v2gv"
+		},
+		{
+			"name": "media-server-0",
+			"data": {
+				"_object_media-server.zip": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/media-server.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"media-server.zip\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/media-server.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T07:16:10Z",
+			"updateTime": "2021-12-03T07:20:41Z",
+			"description": "本模块输入图片信息和渲染信息，输出合成后视频流",
+			"version": "1638516041r5k9aw"
+		},
+		{
+			"name": "mqtt-publisher-0",
+			"data": {
+				"_object_mqtt-publisher.zip": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/mqtt-publisher.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"mqtt-publisher.zip\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/mqtt-publisher.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T07:16:18Z",
+			"updateTime": "2021-12-03T07:20:50Z",
+			"description": "本模块支持mqtt发布功能",
+			"version": "1638516050ftbvkl"
+		},
+		{
+			"name": "light-object-detection-0",
+			"data": {
+				"_object_light-object-detection.zip": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/light-object-detection.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"light-object-detection.zip\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/light-object-detection.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T07:16:29Z",
+			"updateTime": "2021-12-03T07:20:57Z",
+			"description": "本模块支持根据输入的图像桢检测出常用物品信息",
+			"version": "1638516057qemssh"
+		},
+		{
+			"name": "rtspreader-0",
+			"data": {
+				"_object_rtspreader": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/rtspreader.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"rtspreader\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/rtspreader.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T07:16:39Z",
+			"updateTime": "2021-12-03T07:21:04Z",
+			"description": "本模块支持流媒体视频的读取，并按照需要进行视频帧的抽取",
+			"version": "1638516064f3pblc"
+		},
+		{
+			"name": "video-demo-0",
+			"data": {
+				"_object_orchestration.json": "{\"url\":\"https://baetyl-video-demo.bj.bcebos.com/orchestration.json\",\"metadata\":{\"object\":\"orchestration.json\",\"source\":\"http\",\"type\":\"object\",\"url\":\"https://baetyl-video-demo.bj.bcebos.com/orchestration.json\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-03T11:04:23Z",
+			"updateTime": "2021-12-03T11:04:32Z",
+			"description": "video-demo",
+			"version": "16385294727vedyi"
+		},
+		{
+			"name": "object-detection-0",
+			"data": {
+				"_object_object-detection.zip": "{\"url\":\"https://baetyl-easyedge-demo.bj.bcebos.com/object-detection.zip\",\"unpack\":\"zip\",\"metadata\":{\"object\":\"object-detection.zip\",\"source\":\"http\",\"type\":\"object\",\"unpack\":\"zip\",\"url\":\"https://baetyl-easyedge-demo.bj.bcebos.com/object-detection.zip\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-06T03:06:50Z",
+			"updateTime": "2021-12-06T08:14:03Z",
+			"description": "本模块支持根据输入的图像检测出常用物体信息",
+			"version": "1638778443iapt3l"
+		},
+		{
+			"name": "easyedge-0",
+			"data": {
+				"_object_orchestration.json": "{\"url\":\"https://baetyl-easyedge-demo.bj.bcebos.com/orchestration.json\",\"metadata\":{\"object\":\"orchestration.json\",\"source\":\"http\",\"type\":\"object\",\"url\":\"https://baetyl-easyedge-demo.bj.bcebos.com/orchestration.json\",\"userID\":\"a6f05ca24f354a3897d9fdfd0b774204\"}}"
+			},
+			"createTime": "2021-12-06T07:54:09Z",
+			"updateTime": "2021-12-06T07:54:16Z",
+			"description": "orchestration.json",
+			"version": "16387772562nvyeg"
+		}
+	],
+	"total": 10
+}

@@ -1,0 +1,208 @@
+{
+	"items": [{
+			"name": "video-demo-0",
+			"type": "container",
+			"mode": "kube",
+			"labels": {
+				"baetyl-app-mode": "kube"
+			},
+			"createTime": "2021-12-03T07:18:28Z",
+			"version": "1650186155jqxryt",
+			"selector": "baetyl-node-mode=kube,baetyl-node-name=video-demo",
+			"services": [{
+				"name": "video-demo-0",
+				"image": "baetyltechtest/dcellframework:0.5.9.8",
+				"volumeMounts": [{
+					"name": "rtspreader",
+					"mountPath": "/home/work/cells/rtspreader-0"
+				}, {
+					"name": "light-object-detection",
+					"mountPath": "/home/work/cells/light-object-detection-0"
+				}, {
+					"name": "mqtt-publisher",
+					"mountPath": "/home/work/cells/mqtt-publisher-0"
+				}, {
+					"name": "media-server",
+					"mountPath": "/home/work/cells/media-server-0"
+				}, {
+					"name": "alarm-report",
+					"mountPath": "/home/work/cells/alarm-report-0"
+				}, {
+					"name": "video-demo",
+					"mountPath": "/home/work/orchestration/"
+				}, {
+					"name": "dcell-logs",
+					"mountPath": "/home/work/app/dcell-pandora/build/log/"
+				}, {
+					"name": "dcell-system",
+					"mountPath": "/home/work/app/data/baetyl/alarm"
+				}, {
+					"name": "video-mp4",
+					"mountPath": "/home/work/data/baetyl/"
+				}],
+				"ports": [{
+					"hostPort": 80,
+					"containerPort": 80,
+					"protocol": "TCP"
+				}],
+				"resources": {},
+				"security": {},
+				"replica": 1,
+				"jobConfig": {
+					"completions": 1,
+					"restartPolicy": "Never"
+				},
+				"type": "deployment"
+			}],
+			"volumes": [{
+				"name": "rtspreader",
+				"config": {
+					"name": "rtspreader-0",
+					"version": "1638516064f3pblc"
+				}
+			}, {
+				"name": "light-object-detection",
+				"config": {
+					"name": "light-object-detection-0",
+					"version": "1638516057qemssh"
+				}
+			}, {
+				"name": "mqtt-publisher",
+				"config": {
+					"name": "mqtt-publisher-0",
+					"version": "1638516050ftbvkl"
+				}
+			}, {
+				"name": "media-server",
+				"config": {
+					"name": "media-server-0",
+					"version": "1638516041r5k9aw"
+				}
+			}, {
+				"name": "alarm-report",
+				"config": {
+					"name": "alarm-report-0",
+					"version": "1638516034n5v2gv"
+				}
+			}, {
+				"name": "video-demo",
+				"config": {
+					"name": "video-demo-0",
+					"version": "16385294727vedyi"
+				}
+			}, {
+				"name": "dcell-logs",
+				"hostPath": {
+					"path": "/Users/zhaoxin26/video-data/logs"
+				}
+			}, {
+				"name": "dcell-system",
+				"hostPath": {
+					"path": "/Users/zhaoxin26/video-data/alarm"
+				}
+			}, {
+				"name": "video-mp4",
+				"config": {
+					"name": "video-mp4",
+					"version": "1638345505rst6xu"
+				}
+			}],
+			"updateTime": "2022-04-17T09:02:35Z",
+			"cronTime": "2021-11-30T11:18:56Z",
+			"replica": 1,
+			"workload": "deployment",
+			"jobConfig": {
+				"completions": 1,
+				"restartPolicy": "Never"
+			}
+		},
+		{
+			"name": "dcell-console",
+			"type": "container",
+			"mode": "kube",
+			"labels": {
+				"baetyl-app-mode": "kube"
+			},
+			"createTime": "2021-12-03T03:14:54Z",
+			"version": "16387802908pjsdx",
+			"selector": "baetyl-node-mode=kube,dcell=dcell",
+			"services": [{
+				"name": "dcell-node-console",
+				"image": "baetyltechtest/console-biv:20210907-1630995496-amd64",
+				"ports": [{
+					"hostPort": 8888,
+					"containerPort": 8888,
+					"protocol": "TCP"
+				}],
+				"resources": {},
+				"security": {},
+				"replica": 1,
+				"jobConfig": {
+					"restartPolicy": "Never"
+				},
+				"type": "deployment"
+			}],
+			"updateTime": "2021-12-23T12:57:26Z",
+			"cronTime": "2021-11-30T11:10:36Z",
+			"jobConfig": {}
+		},
+		{
+			"name": "dcell-service",
+			"type": "container",
+			"mode": "kube",
+			"labels": {
+				"baetyl-app-mode": "kube"
+			},
+			"createTime": "2021-12-03T03:14:45Z",
+			"version": "1638780306ptrgdu",
+			"selector": "baetyl-node-mode=kube,dcell=dcell",
+			"services": [{
+				"name": "sis-device",
+				"image": "baetyltechtest/dcell-node-service:20210906-1630894437-amd64",
+				"volumeMounts": [{
+					"name": "baetyl-object",
+					"mountPath": "/var/lib/baetyl/object"
+				}, {
+					"name": "image",
+					"mountPath": "/home/work/app/data/baetyl/alarm"
+				}, {
+					"name": "properties",
+					"mountPath": "/home/work/dcell/dcell-node-service-api/conf/"
+				}],
+				"ports": [{
+					"hostPort": 8022,
+					"containerPort": 8022,
+					"protocol": "TCP"
+				}],
+				"resources": {},
+				"security": {},
+				"replica": 1,
+				"jobConfig": {
+					"restartPolicy": "Never"
+				},
+				"type": "deployment"
+			}],
+			"volumes": [{
+				"name": "baetyl-object",
+				"hostPath": {
+					"path": "/var/lib/baetyl/object"
+				}
+			}, {
+				"name": "image",
+				"hostPath": {
+					"path": "/Users/zhaoxin26/video-data/alarm"
+				}
+			}, {
+				"name": "properties",
+				"config": {
+					"name": "dcell-service",
+					"version": "1638512179qg8hsl"
+				}
+			}],
+			"updateTime": "2021-12-23T12:57:26Z",
+			"cronTime": "2021-11-30T11:05:39Z",
+			"jobConfig": {}
+		}
+	],
+	"total": 3
+}
